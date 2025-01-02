@@ -1,9 +1,9 @@
 {
   "name": "cfd-toolkit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A comprehensive toolkit for CFD data processing, combining VTU reading and format conversion capabilities",
- "main": "./index.js",
- "exports": {
+  "main": "./index.js",
+  "exports": {
     ".": "./dist/index.js"
   },
   "scripts": {
@@ -28,6 +28,16 @@
     "type": "git",
     "url": "git+https://github.com/sridhar-mani/cfd-toolkit.git"
   },
-  "keywords": ["cfd", "vtk", "vtu", "stl", "mesh", "scientific-computing","openfoam","convertor","simulation"],
+  "keywords": [
+    "cfd",
+    "vtk",
+    "vtu",
+    "stl",
+    "mesh",
+    "scientific-computing",
+    "openfoam",
+    "convertor",
+    "simulation"
+  ],
   "homepage": "https://github.com/sridhar-mani/cfd-toolkit#readme"
 }
