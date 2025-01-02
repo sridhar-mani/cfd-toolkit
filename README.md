@@ -1,26 +1,56 @@
-# VTU Reader
+# CFD Toolkit
 
-**VTU Reader** is a JavaScript library designed to load, parse, and extract information from **VTU (Unstructured Grid)** files. It leverages the **@simzero/rom** library for parsing and interacting with VTK-based file formats, making it easy to process scientific data stored in the VTU format.
+A comprehensive toolkit for CFD (Computational Fluid Dynamics) data processing and format conversion. This library combines VTU file processing capabilities from @simzero/rom with format conversion utilities from @simzero/cfdutils.
 
 ## Features
 
-- Load **VTU** files and convert them into a structured format for easy data manipulation.
-- Parse point data, cell data, and other fields within the VTU file.
-- Flexible and extensible for integration with any visualization or computational tools that support unstructured grid data.
+- **VTU File Processing**
+  - Load and parse VTU files
+  - Extract point and cell data
+  - Access scalar field values
+  - List available fields
+
+- **Format Conversions**
+  - STL to VTK conversion
+  - STL to VTP conversion
+  - VTK to STL conversion
+  - VTP to STL conversion
 
 ## Installation
 
-You have two options for integrating VTU Reader into your project.
-
-### Option 1: Install via NPM
-
-To install **VTU Reader** via npm, run:
-
 ```bash
-npm install vtu-reader
+npm install cfd-toolkit
+```
+
+## Usage
+
+```javascript
+const cfdToolkit = require('cfd-toolkit');
+
+// Load and parse VTU file
+const data = cfdToolkit.loadVtuFile(arrayBuffer);
+console.log(data.availableFields);  // List available fields
+console.log(data.pointData);        // Access point data
+console.log(data.cellData);         // Access cell data
+
+// Format conversions
+const vtkData = cfdToolkit.stlToVtk(stlData);
+const vtpData = cfdToolkit.stlToVtp(stlData);
+const stlFromVtk = cfdToolkit.vtkToStl(vtkData);
+const stlFromVtp = cfdToolkit.vtpToStl(vtpData);
+```
 
 ## License
 
-This project is licensed under the **GNU Lesser General Public License (LGPL-3.0-only)**. See the [LICENSE](LICENSE) file for more information.
+LGPL-3.0-only - This library incorporates code from @simzero/rom and @simzero/cfdutils, both licensed under LGPL-3.0.
 
-This project makes use of the **@simzero/rom** library, which is licensed under the **LGPL-3.0-only** license. You can find the source code of **@simzero/rom** on [GitHub](https://github.com/simzero-oss/rom-js).
+## Credits
+
+This toolkit builds upon:
+- [@simzero/rom](https://github.com/simzero/rom) - For VTU file processing
+- [@simzero/cfdutils](https://github.com/simzero/cfdutils) - For format conversions
+- [vtk.js](https://github.com/Kitware/vtk-js) - For visualization capabilities
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
