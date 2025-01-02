@@ -1,9 +1,9 @@
 {
   "name": "cfd-toolkit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A comprehensive toolkit for CFD data processing, combining VTU reading and format conversion capabilities",
   "main": "./index.js",
-  "module":"./index.js",
+  "module": "./index.js",
   "exports": {
     ".": "./index.js"
   },
