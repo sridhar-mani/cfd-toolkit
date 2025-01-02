@@ -1,8 +1,11 @@
 {
   "name": "cfd-toolkit",
-  "version": "1.0.0",
-  "description": "A comprehensive toolkit for CFD data processing, combining VTU reading capabilities from @simzero/rom and format conversions from @simzero/cfdutils",
-  "main": "src/cfdToolkit.js",
+  "version": "1.0.1",
+  "description": "A comprehensive toolkit for CFD data processing, combining VTU reading and format conversion capabilities",
+ "main": "./index.js",
+ "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production"
@@ -10,8 +13,6 @@
   "author": "Sridhar Mani",
   "license": "LGPL-3.0-only",
   "dependencies": {
-    "@simzero/rom": "^1.1.0",
-    "@simzero/cfdutils": "^1.0.0",
     "@kitware/vtk.js": "^24.0.0"
   },
   "devDependencies": {
@@ -27,16 +28,6 @@
     "type": "git",
     "url": "git+https://github.com/sridhar-mani/cfd-toolkit.git"
   },
-  "keywords": [
-    "cfd",
-    "vtk",
-    "vtu",
-    "stl",
-    "mesh",
-    "scientific-computing"
-  ],
-  "bugs": {
-    "url": "https://github.com/sridhar-mani/cfd-toolkit/issues"
-  },
+  "keywords": ["cfd", "vtk", "vtu", "stl", "mesh", "scientific-computing","openfoam","convertor","simulation"],
   "homepage": "https://github.com/sridhar-mani/cfd-toolkit#readme"
 }
