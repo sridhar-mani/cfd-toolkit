@@ -1,0 +1,14 @@
+{
+  "name": "vtu-reader",
+  "version": "1.0.0",
+  "description": "This library utilizes @simzero/rom library from npm to read vtu file and output as a easily readable format to be rendered in vtk.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@simzero/rom": "^1.1.0"
+  }
+}
